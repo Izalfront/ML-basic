@@ -9,22 +9,15 @@
 # step 3: profit = 6-1=5
 harga_saham = [7,1,5,3,6,4]
 
-beli = 0
-jual = len(harga_saham) - 1
-target = 2
+beli = harga_saham[0]
+untung_terbesar = 0
 
-while beli < jual:
-    profit = harga_saham[jual] - harga_saham[beli]
-    print(f"Profit {harga_saham[jual]} - {harga_saham[beli]} = {profit}")
+for harga in harga_saham:
+    if harga < beli:
+        beli = harga
+    elif harga - beli > untung_terbesar:
+        untung_terbesar = harga - beli
+print(f"Untung terbesar adalah {untung_terbesar}")
 
-    if profit == target:
-        print(f"Ketemu! {harga_saham[jual]} - {harga_saham[beli]} = {target}")
-        break
-    elif profit < target:
-        beli += 1
-    elif profit > target:
-        jual -= 1
-else:
-    print("Tidak ada pasangan yang ditemukan")
 
 
