@@ -15,8 +15,11 @@ untung_terbesar = 0
 for harga in harga_saham:
     if harga < beli:
         beli = harga
+        print(f"Beli di harga terkecil {beli}")
     elif harga - beli > untung_terbesar:
         untung_terbesar = harga - beli
+        print(f"Jual di harga tertinggi {harga}")
+        print(f"Untung {harga - beli}")
 print(f"Untung terbesar adalah {untung_terbesar}")
 
 
