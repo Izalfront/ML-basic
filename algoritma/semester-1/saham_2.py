@@ -8,7 +8,8 @@
 # harus 1x looping untuk dapat nilai akhir total semua keuntungan misal [1,2,3,4,5] = 4
 # beli = harga_saham[0]
 # untung_terbesar = 0
-harga_saham = [1,2,3,4,5]
+# harga_saham = [1,2,3,4,5]
+harga_saham = [1,2,4]
 total_untung = 0
 
 for i in range(1, len(harga_saham)):
