@@ -7,6 +7,7 @@ keuntungan_tertinggi = harga_saham[0]
 harga_termurah = harga_saham[0]
 
 for i in range(1, len(harga_saham)):
+    # Jika kena else maka transaksi ulang
     if harga_sekarang + harga_saham[i] > harga_saham[i]:
         harga_sekarang = harga_saham[i]
         print(f"harga sekarang: {harga_sekarang}")
